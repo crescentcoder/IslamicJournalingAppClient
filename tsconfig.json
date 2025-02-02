@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve", // Use react-jsx for React 17+ (Recommended)
+    "moduleResolution": "node", // Resolves modules like Node.js
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "noEmit": true, // Don't emit files, just check for errors
+    "esModuleInterop": true, // Ensure compatibility with CommonJS modules
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true, // Ensure every file is treated as isolated module
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
