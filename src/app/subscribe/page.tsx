@@ -1,21 +1,17 @@
 'use client'
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 import React from 'react'
 import axios from 'axios'
 
 const SubscribePage = () => {
     const getCheckoutLink = async (pricingLookupKey: string) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/payments/get-checkout-link/', 
+            const response = await axios.post('${API_URL}/api/payments/get-checkout-link/', 
                 { 
                     price_lookup_key: pricingLookupKey
-                 },
-                {
-                    headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
-                        'Content-Type': 'application/json'
-                    }
-                }
+                 }
             )
             window.open(response.data.url, '_blank')
         }
