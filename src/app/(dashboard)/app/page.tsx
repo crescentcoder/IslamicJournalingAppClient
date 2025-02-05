@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'; // Next.js router for navigation
-import LogoutButton from '../../../components/LogoutButton.tsx'
-import CustomerPortalButton from '../../../components/CustomerPortalButton.tsx'
+import LogoutButton from '../../../components/LogoutButton'
+import CustomerPortalButton from '../../../components/CustomerPortalButton'
 
 const AppPage = () => {
     const router = useRouter(); // Replacing useNavigate with useRouter
